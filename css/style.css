@@ -1,0 +1,217 @@
+/** GENERAL SECTION **/
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Chelsea Market', cursive;
+    font-family: 'Unkempt', cursive;
+    line-height: 16px;
+    justify-content: center;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #000;
+}
+
+a                                                       /* all links */
+{
+    text-decoration: none;
+}
+
+.centerContainer                                        /* general settings center block content */
+{   
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+main h1                                                 /* all headings */
+{
+    font-family: 'Chelsea Market', cursive;;
+    font-size: 5rem;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.subheadingTxt                                          /* all subheadings */
+{
+    font-size: 2.2rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.gameButtons > a, .gameButtons > form > button                              /* all game buttons' text styles */
+{
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 7px;
+    padding: 12px;
+    display: inline-block;
+}
+
+.gameButtons > a:link, .gameButtons > form > input:link                   /* all game buttons hover settings */
+{
+    color: #fff;
+    border: #fff solid 1px;
+    background-color: none;
+}
+
+.gameButtons > a:visited, .gameButtons > form > input:visited              /* all game buttons hover settings */
+{
+    color: #fff;
+    border: #fff solid 1px;
+    background-color: none;
+}
+
+.gameButtons > a:hover, .gameButtons > form > input:hover                  /* all game buttons hover settings */
+{
+    color: #fff;
+    border: #fd6109 solid 1px;
+    background-color: #fd6109;
+}
+
+
+
+/** LAUNCH PAGE **/
+#bodyLaunch .centerContainer                            /* launch background pic */
+{
+    background-image: url("../img/space2-bg.png");
+}
+
+#mainLaunch h1                                          /* launch page heading */
+{
+    padding: 80px 100px 0 100px;
+    line-height: 90px;
+}
+
+#bodyLaunch section:last-child                          /* buttons section */
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#bodyLaunch section:last-child > div:nth-child(1)       /* left game button */
+{
+    justify-self: end;
+    margin-right: 40px;
+}
+
+#bodyLaunch section:last-child > div:nth-child(2)       /* right game button */
+{
+    justify-self: start;
+    margin-left: 40px;
+}
+
+#mainLaunch .gameButtons > a                            /* game buttons */
+{
+    margin-top: 165px;
+}
+
+#bodyLaunch footer i                                    /* audio button */
+{
+    font-size: 1.3rem;
+    margin-top: 31%;
+    margin-left: 90%;
+    color: #fff;
+}
+
+
+
+/** RULES PAGE **/
+#bodyRules .centerContainer                             /* Rules background pic */
+{   
+    background-image: url("../img/space-rules-bg.png");
+}
+
+#mainRules h1                                           /* Rules page heading */
+{
+    padding: 50px 100px 0 100px;
+    line-height: 90px;
+}
+
+#mainRules .gameButtons, #mainStart > section:last-child                        /* NEXT button grid */
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#mainRules .gameButtons > a                  /* NEXT button */
+{
+    margin: 30px 40px 0 0;
+    grid-column-end: 3;
+    justify-self: end;
+}
+
+#rulesContent                                           /* Rules content section */
+{
+    background-color: rgba(5, 5, 5, 0.534);
+    margin: 55px 40px 40px 40px;
+}
+
+#rulesContent > p                                       /* Rules content */
+{
+    padding: 20px 40px 0 40px;
+    font-size: 1.5rem;
+    line-height: 35px;
+}
+
+#rulesContent > p:last-child                            /* final paragraph */
+{
+    padding-bottom: 20px;
+}
+
+
+
+/** START PAGE **/
+#bodyStart .centerContainer                             /* Start background pic */
+{
+    background-image: url("../img/space-rules-bg.png");
+}
+
+#mainStart                                              /* Start main section */
+{
+    padding: 150px 0 0 70px;
+
+}
+
+#mainStart form > label                                 /* Start label text */
+{
+    display: block;
+    font-size: 2rem;
+}
+
+#userName > input                                       /* text box */
+{
+    font-size: 1.5rem;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    padding-left: 5px;
+    width: 80%;
+}
+
+.gameButtons > form > input                            /* Difficulty settings */
+{
+    margin: 20px 40px 20px 0;
+    font-size: 1.5rem;
+    font-family: 'Unkempt', cursive;
+    font-weight: 700;
+    border-radius: 7px;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+#mainStart > section:last-child > div                                       /* Next button  */
+{
+    grid-column-end: 3;
+    justify-self: end;
+    margin: 250px 40px 0 0;
+}
