@@ -23,21 +23,27 @@ a                                                       /* all links */
     text-decoration: none;
 }
 
-.centerContainer                                        /* general settings center block content */
+.centerContainer                                        /* core background image settings */
 {   
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     height: 100vh;
-    opacity: 0.8;
     z-index: -1;
+}
+
+#bodyRules .centerContainer, #bodyStart .centerContainer,  
+#addLandingBody .centerContainer, #subLandingBody .centerContainer,       /* general background pic for landing pages*/
+#bodyReport .centerContainer
+{   
+    background-image: url("../img/space-rules-bg.png");
 }
 
 main h1                                                 /* all headings */
 {
     font-family: 'Chelsea Market', cursive;;
     font-size: 5rem;
-    padding-top: 60px;
+    padding-top: 90px;
     text-align: center;
 }
 
@@ -48,34 +54,46 @@ main h1                                                 /* all headings */
     text-align: center;
 }
 
-.gameButtons > a, .gameButtons > form > button                              /* all game buttons' text styles */
+.gameButtons > a, .gameButtons > form > input,                                   /* all game buttons' text styles */
+#mainReport .gameButtons > input
+
 {
     font-size: 2rem;
     font-weight: 700;
     border-radius: 7px;
     padding: 12px;
     display: inline-block;
+    z-index: 3;
 }
 
-.gameButtons > a:link, .gameButtons > form > input:link                   /* all game buttons hover settings */
+.gameButtons > a:link, .gameButtons > form > input:link,                    /* all game buttons hover settings */
+#mainReport > section > .gameButtons > input:link
 {
     color: #fff;
     border: #fff solid 1px;
     background-color: none;
 }
 
-.gameButtons > a:visited, .gameButtons > form > input:visited              /* all game buttons hover settings */
+.gameButtons > a:visited, .gameButtons > form > input:visited,               /* all game buttons hover settings */
+#mainReport > section > .gameButtons > input:visited
 {
     color: #fff;
     border: #fff solid 1px;
     background-color: none;
 }
 
-.gameButtons > a:hover, .gameButtons > form > input:hover                  /* all game buttons hover settings */
+.gameButtons > a:hover, .gameButtons > form > input:hover,                   /* all game buttons hover settings */
+#mainReport > section > .gameButtons > input:hover 
 {
     color: #fff;
     border: #fd6109 solid 1px;
     background-color: #fd6109;
+}
+
+.highlightWord                                                               /* all highlighted words */
+{
+    color: #fd6109;
+    font-weight: 500;
 }
 
 
@@ -126,26 +144,22 @@ main h1                                                 /* all headings */
 
 
 /** RULES PAGE **/
-#bodyRules .centerContainer                             /* Rules background pic */
-{   
-    background-image: url("../img/space-rules-bg.png");
-}
-
 #mainRules h1                                           /* Rules page heading */
 {
     padding: 50px 100px 0 100px;
     line-height: 90px;
 }
 
-#mainRules .gameButtons, #mainStart > section:last-child                        /* NEXT button grid */
+#mainRules .gameButtons, #mainStart > section:last-child,                      /* NEXT button grid */
+#mainAddLanding .gameButtons, #mainSubLanding .gameButtons
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-#mainRules .gameButtons > a                  /* NEXT button */
+#mainRules .gameButtons > a                             /* NEXT button */
 {
-    margin: 30px 40px 0 0;
+    margin: 10px 40px 0 0;
     grid-column-end: 3;
     justify-self: end;
 }
@@ -171,11 +185,6 @@ main h1                                                 /* all headings */
 
 
 /** START PAGE **/
-#bodyStart .centerContainer                             /* Start background pic */
-{
-    background-image: url("../img/space-rules-bg.png");
-}
-
 #mainStart                                              /* Start main section */
 {
     padding: 150px 0 0 70px;
@@ -190,28 +199,136 @@ main h1                                                 /* all headings */
 
 #userName > input                                       /* text box */
 {
-    font-size: 1.5rem;
     display: block;
+    font-size: 1.5rem;
     margin-top: 20px;
     margin-bottom: 80px;
     padding-left: 5px;
     width: 80%;
 }
 
-.gameButtons > form > input                            /* Difficulty settings */
+#mainStart .gameButtons > form > input                   /* difficulty settings buttons */
 {
+    display: inline-block;
     margin: 20px 40px 20px 0;
     font-size: 1.5rem;
     font-family: 'Unkempt', cursive;
     font-weight: 700;
     border-radius: 7px;
     padding: 10px 20px;
-    display: inline-block;
 }
 
-#mainStart > section:last-child > div                                       /* Next button  */
+#mainStart > section:last-child > div, #mainAddLanding > section > div > a,           /* Start & Landing Pages - Next button  */
+#mainSubLanding > section > div > a, #mainSubLanding > section > div > a
 {
     grid-column-end: 3;
     justify-self: end;
     margin: 250px 40px 0 0;
+}
+
+
+
+/** ADDITION & SUBTRACTION LANDING PAGES **/
+#mainAddLanding h1, #mainSubLanding h1                                              /* Landing Pages headings */
+{
+    padding: 50px 90px 0 100px;
+    line-height: 90px;
+}
+
+.dummyEquation                                                                      /* fake equation section */
+{
+    position: relative;
+    display: inline-block;
+    margin: 20px 0 0 100px;
+    justify-self: center;
+}
+
+.dummyEquation > img                                                                /* fake equation image */
+{
+    width: 500px;
+    transform: rotateY(180deg);
+}
+
+.dummyEquation > div > p                                                            /* fake equation text */
+{
+    position: absolute;    
+    font-size: 2.5rem;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 55%;
+    width: 30%;
+    height: 20%;
+    background-color: #fd6109;
+    padding: 20px 0 40px 0;
+    text-align: center;
+    font-weight: 700;
+    z-index: 30;
+}
+
+#mainAddLanding .gameButtons > a, #mainSubLanding .gameButtons > a                 /* PLAY button */
+{
+    margin-top: 160px;
+}
+
+
+
+/** WIN & LOSE PAGES **/
+#bodyWinPage > .centerContainer                                                     /* Win page background image */
+{
+    background-image: url(../img/winner-page.gif);
+}
+
+#bodyLosePage > .centerContainer                                                    /* Lose page background image */
+{
+    background-image: url(../img/loser-page.gif);
+}
+
+#bodyWinPage h1, #bodyLosePage h1                                                   /* Win & Lose headings */
+{
+    padding: 50px 100px 5px 100px;
+    line-height: 90px;
+}
+
+#bodyWinPage .gameButtons, #bodyLosePage .gameButtons                                /* Win & Lose buttons */
+{
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+
+/** REPORT PAGE **/
+#reportContent                                           /* Report content section */
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(5, 5, 5, 0.534);
+    margin: 75px 60px 40px 60px;
+    padding: 40px 0 40px 120px;
+}
+
+#reportContent > div > p                                  /* Report content */
+{
+    font-size: 1.5rem;
+    line-height: 55px;
+}
+
+#mainReport > section > .gameButtons > input              /* buttons' text */
+{
+    display: inline-block;
+    margin: 20px 40px;
+    font-size: 1.5rem;
+    font-family: 'Unkempt', cursive;
+    font-weight: 700;
+    border-radius: 7px;
+    padding: 10px 20px;
+}
+
+#mainReport .gameButtons                                  /* all Report buttons */
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-end: 2;
+    
 }
