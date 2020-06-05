@@ -141,8 +141,8 @@ main h1                                                 /* all headings */
 #bodyLaunch footer i                                    /* audio button */
 {
     font-size: 1.5rem;
-    margin-top: 31%;
-    margin-left: 90%;
+    margin-top: 28%;
+    margin-left: 15%;
     color: #fff;
 }
 
@@ -185,6 +185,14 @@ main h1                                                 /* all headings */
 #rulesContent > p:last-child                            /* final paragraph */
 {
     padding-bottom: 20px;
+}
+
+#bodyRules i                                     /* audio button */
+{
+    font-size: 1.5rem;
+    margin-left: 15%;
+    color: #fff;
+    align-self: end;
 }
 
 
@@ -310,19 +318,24 @@ main h1                                                 /* all headings */
     grid-template-columns: 1fr 1fr;
     background-color: rgba(5, 5, 5, 0.534);
     margin: 75px 60px 40px 60px;
-    padding: 40px 0 40px 120px;
+    padding: 25px 0 25px 80px;
 }
 
 #reportContent > div > p                                  /* Report content */
 {
     font-size: 1.5rem;
-    line-height: 55px;
+    line-height: 50px;
+}
+
+.previousPlayerDetails                                    /* text for previous player's details */
+{
+    color: #bdbdbd;
 }
 
 #mainReport > section > .gameButtons > input              /* buttons' text */
 {
     display: inline-block;
-    margin: 20px 40px;
+    margin: 10px 40px;
     font-size: 1.5rem;
     font-family: 'Unkempt', cursive;
     font-weight: 700;
