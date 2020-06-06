@@ -459,7 +459,7 @@ main h1                                                 /* all headings */
     grid-row: 1;
     justify-self: center;
     margin-left: 40px;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .tableArea > div:last-child > img                                                       /* laser and blaser images */
